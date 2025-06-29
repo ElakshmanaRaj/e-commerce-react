@@ -77,7 +77,6 @@ const ProductList = () => {
           <Grid item size={{xs: 12, md:6, lg:4}} key={product.id}>
 
             <Card className="card" title={product.title} sx={{position:"relative"}}
-            onClick={()=>navigate(`/product/${product.id}`)}
             >
               <img src={product.image} alt={product.title} />
 
