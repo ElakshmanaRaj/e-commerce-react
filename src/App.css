@@ -1,0 +1,88 @@
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 20%;
+    min-width: 200px;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.product-list {
+    margin-left: 20%;
+    width: 80%;
+}
+
+
+.card{
+    width: 300px;
+    height: 340px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    padding: 10px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease-in-out !important;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: 10px auto;
+}
+
+.text-overflow{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* Responsive Classes */
+
+@media (max-width: 992px) {
+
+    .product-list{
+        margin-left: 35%;
+        width: 75%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar{
+        display: none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .product-list{
+        margin-left: 8%;
+        width: 70%;
+        margin-top: 15%;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .product-list{
+        margin-left: 5%;
+        margin-top: 20%;
+        width: 70%;
+    }
+    
+}
+
