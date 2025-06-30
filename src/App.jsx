@@ -5,7 +5,7 @@ import MainLayout from './pages/MainLayout';
 import ProductList from './components/ProductList';
 import SearchList from './pages/SearchList';
 import ProductLayout from './pages/ProductLayout';
-
+import Scroll from './components/Scroll';
 
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
 
         <Category>
             <Router>
+            <Scroll/>
                 <Routes>
                     <Route path="/*" element={<MainLayout />} >
                     <Route index element={<ProductList/>}/>

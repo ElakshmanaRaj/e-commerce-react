@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { Box, Container, Typography, InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,7 @@ import { CategoryContext } from "../context/Category";
 const Header = () => {
   const navigate = useNavigate();
   const { search, setSearch } = useContext(CategoryContext);
+  const inputRef = useRef();
 
   // Search Function
 
@@ -15,6 +16,7 @@ const Header = () => {
     if (search.trim() !== "") {
       navigate(`/search/${search.trim()}`);
       setSearch("");
+      inputRef.current.blur();
     }
   };
 
@@ -23,6 +25,7 @@ const Header = () => {
       handleSearch(e);
     }
   };
+
 
   return (
     <>
@@ -69,6 +72,7 @@ const Header = () => {
             <InputBase
               placeholder="Search products..."
               fullWidth
+              inputRef={inputRef}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={keyDown}

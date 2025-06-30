@@ -85,11 +85,11 @@ const SearchList = () => {
         </Typography>
 
         {/* Search results showing  */}
-        <Grid container spacing={3} mt={2}>
+        <Grid container spacing={3} mt={2} mb={3}>
         {filteredProducts.length > 0 ? (
         filteredProducts.map((product) => (
 
-            <Grid item size={{xs: 12, md:6, lg:4}} key={product.id}>
+            <Grid item  size={{xs: 12, md:6, lg:4}} key={product.id}>
             <Card className="card" title={product.title} sx={{position:"relative"}}>
               
               <img src={product.image} alt={product.title} />
